@@ -10,10 +10,8 @@ const Home = (props) => {
 
   return (
     <div className="mainContainer">
-      <div className={'titleContainer'}>
-        <div>Welcome!</div>
-      </div>
-      <div>This is the home page.</div>
+      
+      <div>Vous êtes sur votre espace personnel de Soccer Bet !</div>
       
     </div>
   )

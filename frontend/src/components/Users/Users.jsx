@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
 function Users() {
-  const [data, setData] = useState([]); // Initialise l'état
+  const [data, setData] = useState([]); 
 
   useEffect(() => {
-    fetch('http://localhost:5001/admin/users') // Spécifie l'URL complète si nécessaire
+    fetch('http://localhost:5001/admin/users') 
       .then(response => {
-        if (!response.ok) { // Vérifie si la réponse est correcte
+        if (!response.ok) { 
           throw new Error('Network response was not ok');
         }
         return response.json();
@@ -20,7 +20,7 @@ function Users() {
 
   return (
     <div>
-      <h1>Users</h1>
+      <h1 className="bg-slate-200">Users</h1>
       <ul>
         {data.map(user => (
           <li key={user.user_id}>{user.firstname} {user.lastname}</li>

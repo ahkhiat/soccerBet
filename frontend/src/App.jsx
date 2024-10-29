@@ -5,19 +5,13 @@ import Login from './components/Login/Login';
 
 
 
-function App() {
-  const [token, setToken] = useState();
-
-  const tokenUtilisateur = localStorage.getItem('token')
-
-  if(!tokenUtilisateur) {
-    return <Login setToken={setToken} />
-  }
+function App() { 
+  const [token, setToken] = useState(localStorage.getItem('token'));
 
 
   return (
     <>
-      <Router />
+    <Router token={token} setToken={setToken} />
     </>
   )
 }

@@ -1,20 +1,18 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
-function Input({ label, id, type, name, value, onChange }) {
+function Input({ id, type, name, value, onChange, className, placeholder }) {
   const [inputValue, setInputValue] = useState("");
 
   return (
-    <div className="form-group">
-      <label htmlFor={id}>{label}</label>
       <input
         id={id}
         type={type}
         name={name}
         value={value}
         onChange={onChange}
-        className="form-input"
+        className={className}
+        placeholder={placeholder}
       />
-    </div>
   );
 }
 
