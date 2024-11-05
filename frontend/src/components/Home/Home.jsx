@@ -1,19 +1,15 @@
 import { useNavigate } from 'react-router-dom'
+import LastMatches from '../LastMatches/LastMatches'
 
-const Home = (props) => {
-  const { loggedIn, email } = props
-  const navigate = useNavigate()
-
-  const onButtonClick = () => {
-    // You'll update this function later
-  }
+const Home = () => {
+  
 
   return (
-    <div className="mainContainer">
-      
-      <div>Vous êtes sur votre espace personnel de Soccer Bet !</div>
-      
-    </div>
+    
+    <>
+      <img src="/stadium.jpg" alt="" />
+      <LastMatches />
+    </>
   )
 }
 
